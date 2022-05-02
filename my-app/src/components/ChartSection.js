@@ -17,7 +17,7 @@ export class ChartSection extends Component {
                     }, title: {
                         text: "Market Price (USD)",
                         style: {
-                            fontSize: '14px', fontWeight: 'bold', color: "#fcdf03"
+                            fontSize: '14px', fontWeight: 'bold', color: "#820723"
                         }
                     }, stroke: {
                         curve: 'smooth'
@@ -27,7 +27,7 @@ export class ChartSection extends Component {
                         enabled: false
                     }, yaxis: {
                         show: false
-                    }, colors: ["#fcdf03"],
+                    }, colors: ["#820723"],
                     tooltip: {
                         y: {
                             formatter: (value) => { return value.toFixed(2) }
@@ -49,7 +49,7 @@ export class ChartSection extends Component {
                     }, title: {
                         text: "Market Cap (USD)",
                         style: {
-                            fontSize: '14px', fontWeight: 'bold', color: '#ff69f5'
+                            fontSize: '14px', fontWeight: 'bold', color: '#1C74FC'
                         }
                     }, stroke: {
                         curve: 'smooth'
@@ -59,7 +59,7 @@ export class ChartSection extends Component {
                         enabled: false
                     }, yaxis: {
                         show: false
-                    }, colors: ["#ff69f5"],
+                    }, colors: ["#1C74FC"],
                     tooltip: {
                         y: {
                             formatter: (value) => { return value.toFixed(2) }

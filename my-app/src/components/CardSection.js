@@ -13,7 +13,7 @@ export class CardSection extends Component {
                         style={{ width: "11rem", backgroundColor: "rgb(43, 43, 43)", marginTop: "0px !important" }}>
                         <div className="card-body">
                             <h6 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}>Market Cap 24Hrs</h6>
-                            <p className="card-text fw-bold fs-5" style={{ color: "#fcdf03" }}>
+                            <p className="card-text fw-bold fs-5" style={{ color: "#9E093F" }}>
                                 {this.props.mCap24} %
                             </p>
                         </div>
@@ -22,26 +22,18 @@ export class CardSection extends Component {
                         style={{ width: "11rem", backgroundColor: "rgb(43, 43, 43)", marginTop: "0px !important" }}>
                         <div className="card-body">
                             <h6 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}>All Time High</h6>
-                            <p className="card-text fw-bold fs-5" style={{ color: "#fcdf03" }}>
+                            <p className="card-text fw-bold fs-5" style={{ color: "#9E093F" }}>
                                 ${this.props.ath}
                             </p>
                         </div>
                     </div>
-                    <div className="card text-white text-center  m-3"
-                        style={{ width: "11rem", backgroundColor: "rgb(43, 43, 43)", marginTop: "0px !important" }}>
-                        <div className="card-body">
-                            <h6 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}>All Time High</h6>
-                            <p className="card-text fw-bold fs-5" style={{ color: "#fcdf03" }}>
-                                ${this.props.atl}
-                            </p>
-                        </div>
-                    </div>
+                    
 
                     <div className="card text-white text-center  m-3"
                         style={{ width: "11rem", backgroundColor: "rgb(43, 43, 43)", marginTop: "0px !important" }}>
                         <div className="card-body">
                             <h6 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}>Positive Sentiments </h6>
-                            <p className="card-text fw-bold fs-5" style={{ color: "#fcdf03" }}>
+                            <p className="card-text fw-bold fs-5" style={{ color: "#9E093F" }}>
                                 {this.props.sentiment} %
                             </p>
                         </div>
@@ -71,7 +63,7 @@ export class CardSection extends Component {
                         Price</div>
                     <div style={{
                         fontFamily: 'NHaasGroteskDSPro-65Md', fontSize: '90px',
-                        fontWeight: '700', color: "#fcdf03", textDecoration: 'none solid rgb(255, 255, 255)',
+                        fontWeight: '700', color: "#9E093F", textDecoration: 'none solid rgb(255, 255, 255)',
                         textAlign: 'center'
                     }}>
                         ${this.props.currentPrice}

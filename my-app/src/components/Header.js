@@ -4,7 +4,7 @@ export class Header extends Component {
     render() {
         return (
             <div>
-                <nav className="navbar navbar-expand-lg" style={{backgroundColor:"#fcdf03"}}>
+                <nav className="navbar navbar-expand-lg" style={{backgroundColor:"#A9FC30"}}>
                     <div className="container-fluid">
 
                         <select className="form-select form-select-lg " aria-label=".form-select-lg example" name='selectCoin'
