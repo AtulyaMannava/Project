@@ -42,6 +42,7 @@ export default class App extends Component {
           sentiment={this.state.Data.sentiment_votes_up_percentage} high24={this.state.Data.market_data ? this.state.Data.market_data.high_24h["usd"] : ""}
           low24={this.state.Data.market_data ? this.state.Data.market_data.low_24h["usd"] : ""} />
           <ChartSection Id={this.state.Id} priceChange24={this.state.Data.market_data ? this.state.Data.market_data.price_change_24h_in_currency.usd : ""} 
+          Descrpt={this.state.Data.description ? this.state.Data.description.en  : ""}
         MarketCap={this.state.Data.market_data ? this.state.Data.market_data.market_cap.usd  : ""}
         TotVol={this.state.Data.market_data ? this.state.Data.market_data.total_volume.usd  : ""}
         Circulating= {this.state.Data.market_data ? this.state.Data.market_data["circulating_supply"] : ""}
