@@ -119,7 +119,7 @@ export class ChartSection extends Component {
         let jsonChartData = await chartData.json()
         this.setState({ Price: { options: this.state.Price.options, series: [{ name: 'Market Price', data: jsonChartData.prices }] } })
         this.setState({ Market_Cap: { options: this.state.Market_Cap.options, series: [{ name: 'Market Price', data: jsonChartData.market_caps }] } })
-        this.setState({ Tot_Volume: { options: this.state.Tot_Vol.options, series: [{ name: 'Market Price', data: jsonChartData.total_volumes }] } })
+        this.setState({ Tot_Volume: { options: this.state.Tot_Volume.options, series: [{ name: 'Market Price', data: jsonChartData.total_volumes }] } })
 
     }
 
@@ -255,6 +255,13 @@ export class ChartSection extends Component {
                     <p className="card-text fw-bold "
                         style={{ fontFamily: 'NHaasGroteskDSPro-65Md', color: 'rgb(255, 255, 255)', fontSize: 'large' }}>
                         $ {this.props.TotVolm}
+                    </p>
+                </div>
+                <div className="card-body ">
+                    <h3 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}> Total Supply</h3>
+                    <p className="card-text fw-bold "
+                        style={{ fontFamily: 'NHaasGroteskDSPro-65Md', color: 'rgb(255, 255, 255)', fontSize: 'large' }}>
+                        {this.props.total}
                     </p>
                 </div>
                 <div className="card-body ">

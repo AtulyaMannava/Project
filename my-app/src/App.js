@@ -47,6 +47,7 @@ export default class App extends Component {
         MarketCapt={this.state.Data.market_data ? this.state.Data.market_data.market_cap.usd  : ""}
         TotVolm={this.state.Data.market_data ? this.state.Data.market_data.total_volume.usd  : ""}
         Circulating= {this.state.Data.market_data ? this.state.Data.market_data["circulating_supply"] : ""}
+        total= {this.state.Data.market_data ? this.state.Data.market_data["total_supply"] : ""}
         twitter_followers = {this.state.Data.community_data ? this.state.Data.community_data.twitter_followers : ""}
         />
       </div>
