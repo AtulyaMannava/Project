@@ -119,7 +119,7 @@ export class ChartSection extends Component {
         let jsonChartData = await chartData.json()
         this.setState({ Price: { options: this.state.Price.options, series: [{ name: 'Market Price', data: jsonChartData.prices }] } })
         this.setState({ Market_Cap: { options: this.state.Market_Cap.options, series: [{ name: 'Market Price', data: jsonChartData.market_caps }] } })
-        this.setState({ Tot_Volume: { options: this.state.Tot_Vol.options, series: [{ name: 'Market Price', data: jsonChartData.total_volumes }] } })
+        this.setState({ Tot_Volume: { options: this.state.Tot_Volume.options, series: [{ name: 'Market Price', data: jsonChartData.total_volumes }] } })
 
     }
 
