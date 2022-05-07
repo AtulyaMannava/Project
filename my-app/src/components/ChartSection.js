@@ -258,6 +258,13 @@ export class ChartSection extends Component {
                     </p>
                 </div>
                 <div className="card-body ">
+                    <h3 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}> Total Supply</h3>
+                    <p className="card-text fw-bold "
+                        style={{ fontFamily: 'NHaasGroteskDSPro-65Md', color: 'rgb(255, 255, 255)', fontSize: 'large' }}>
+                        {this.props.total}
+                    </p>
+                </div>
+                <div className="card-body ">
                     <h3 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}> Circulating Supply</h3>
                     <p className="card-text fw-bold "
                         style={{ fontFamily: 'NHaasGroteskDSPro-65Md', color: 'rgb(255, 255, 255)', fontSize: 'large' }}>
