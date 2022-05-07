@@ -9,7 +9,7 @@ export class Header extends Component {
 
                         <select className="form-select form-select-lg " aria-label=".form-select-lg example" name='selectCoin'
                             style={{ width: "fit-content" }} onChange={this.props.handle_Submit}>
-                            <option value="bitcoin">Select Coin</option>
+                            <option value="bitcoin">Select Crypto Coin</option>
                             <option value="avalanche-2">Avalanche (AVAX)</option>
                             <option value="binancecoin">Binance (BNB)</option>
                             <option value="bitcoin">Bitcoin (BTC) </option>

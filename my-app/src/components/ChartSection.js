@@ -75,7 +75,7 @@ export class ChartSection extends Component {
                 ]
             }
             ,
-            Tot_Vol: {
+            Tot_Volume: {
                 options: {
                     grid: {
                         show: false
@@ -119,7 +119,7 @@ export class ChartSection extends Component {
         let jsonChartData = await chartData.json()
         this.setState({ Price: { options: this.state.Price.options, series: [{ name: 'Market Price', data: jsonChartData.prices }] } })
         this.setState({ Market_Cap: { options: this.state.Market_Cap.options, series: [{ name: 'Market Price', data: jsonChartData.market_caps }] } })
-        this.setState({ Tot_Vol: { options: this.state.Tot_Vol.options, series: [{ name: 'Market Price', data: jsonChartData.total_volumes }] } })
+        this.setState({ Tot_Volume: { options: this.state.Tot_Vol.options, series: [{ name: 'Market Price', data: jsonChartData.total_volumes }] } })
 
     }
 
@@ -193,8 +193,8 @@ export class ChartSection extends Component {
                         <div className="col" style={{ maxWidth: '900px' }}>
                         <div >
                                 <Chart
-                                    options={this.state.Tot_Vol.options}
-                                    series={this.state.Tot_Vol.series}
+                                    options={this.state.Tot_Volume.options}
+                                    series={this.state.Tot_Volume.series}
                                     type="line"
                                     height='400'
                                     width='600' />
@@ -239,7 +239,7 @@ export class ChartSection extends Component {
                       <h3 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}> Market Cap </h3>
                       <p className="card-text fw-bold "
                         style={{ fontFamily: 'NHaasGroteskDSPro-65Md', color: 'rgb(255, 255, 255)', fontSize: 'large' }}>
-                        $ {this.props.MarketCap}
+                        $ {this.props.MarketCapt}
                     </p>
                 </div>
 
@@ -247,14 +247,14 @@ export class ChartSection extends Component {
                     <h3 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}> Price Change 24hrs </h3>
                     <p className="card-text fw-bold "
                         style={{ fontFamily: 'NHaasGroteskDSPro-65Md', color: 'rgb(255, 255, 255)', fontSize: 'large' }}>
-                        $ {this.props.priceChange24}
+                        $ {this.props.price_Changein24}
                     </p>
                 </div>
                 <div className="card-body ">
                     <h3 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}> Total Volume </h3>
                     <p className="card-text fw-bold "
                         style={{ fontFamily: 'NHaasGroteskDSPro-65Md', color: 'rgb(255, 255, 255)', fontSize: 'large' }}>
-                        $ {this.props.TotVol}
+                        $ {this.props.TotVolm}
                     </p>
                 </div>
                 <div className="card-body ">
@@ -268,7 +268,7 @@ export class ChartSection extends Component {
                     <h3 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}> Twitter Followers</h3>
                     <p className="card-text fw-bold "
                         style={{ fontFamily: 'NHaasGroteskDSPro-65Md', color: 'rgb(255, 255, 255)', fontSize: 'large' }}>
-                        {this.props.twitterF}
+                        {this.props.twitter_followers}
                     </p>
                 </div>
                 </div>
