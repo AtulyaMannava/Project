@@ -55,20 +55,33 @@ export class CardSection extends Component {
                                 ${this.props.low24}
                             </p>
                         </div>
+                
                     </div>
-                </section>
+                    <div className="card text-white text-center  m-3"
+                        style={{ width: "24rem", backgroundColor: "rgb(43, 43, 43)", marginTop: "0px !important" }}>
+                        <div className="card-body">
+                            <h6 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}>Last Updated</h6>
+                            <p className="card-text fw-bold fs-5" style={{ color: "#9E093F" }}>
+                                {this.props.lastupdated}
+                            </p>
+                        </div>
+                    </div>
+                    </section>  
+               
                 <div>
                     <div className="text-white text-center"
-                        style={{ fontFamily: 'NHaasGroteskDSPro-65Md', overflow: 'visible', height: '2px', marginTop: "1%" }}> Current
+                        style={{ fontFamily: 'NHaasGroteskDSPro-65Md', fontSize:'20px', overflow: 'visible', height: '4px', marginTop: "3%" }}> Current
                         Price</div>
                     <div style={{
-                        fontFamily: 'NHaasGroteskDSPro-65Md', fontSize: '90px',
+                        fontFamily: 'NHaasGroteskDSPro-65Md', fontSize: '100px',
                         fontWeight: '700', color: "#9E093F", textDecoration: 'none solid rgb(255, 255, 255)',
                         textAlign: 'center'
                     }}>
                         ${this.props.currentPrice}
                     </div>
                 </div>
+             
+               
             </div>
         )
     }

@@ -4,7 +4,7 @@ export class Header extends Component {
     render() {
         return (
             <div>
-                <nav className="navbar navbar-expand-lg" style={{backgroundColor:"#A9FC30"}}>
+                <nav className="navbar navbar-expand-lg" style={{backgroundColor:"#96062C"}}>
                     <div className="container-fluid">
 
                         <select className="form-select form-select-lg " aria-label=".form-select-lg example" name='selectCoin'
@@ -20,6 +20,8 @@ export class Header extends Component {
                             <option value="ripple">Ripple (XRP)</option>
                             <option value="solana">Solana (SOL)</option>
                             <option value="tether">Tether (USDT)</option>
+                            <option value="terra-luna">Terra (luna)</option>
+                            <option value="usd-coin">USD-Coin (USDC)</option>
                         </select>
 
                         <a className="navbar-brand d-flex ml-auto display-2 text-dark fs-2 fw-bold text-uppercase "

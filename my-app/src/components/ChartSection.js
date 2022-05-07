@@ -47,7 +47,7 @@ export class ChartSection extends Component {
                     grid: {
                         show: false
                     }, title: {
-                        text: "Market Cap (USD)",
+                        text: "Market Cap (USD$)",
                         style: {
                             fontSize: '14px', fontWeight: 'bold', color: '#1C74FC'
                         }
@@ -80,7 +80,7 @@ export class ChartSection extends Component {
                     grid: {
                         show: false
                     }, title: {
-                        text: "Market Volume",
+                        text: "Market Volume(Sum of total trades)",
                         style: {
                             fontSize: '14px', fontWeight: 'bold', color: "#00ffea"
                         }
@@ -98,6 +98,7 @@ export class ChartSection extends Component {
                             formatter: (value) => { return value.toFixed(2) }
                         }, theme: "dark"
                     }, 
+                  
                 },
                 series: [
                     {
@@ -146,7 +147,7 @@ export class ChartSection extends Component {
             <div>
                <div className="container">
                     <div className="row">
-                        <div className="col" style={{ maxWidth: '610px' }}>
+                        <div className="col" style={{ maxWidth: '2400px' }}>
                             <div id="chart">
                                 <div className="toolbar">
                                     <button id="one_month"
@@ -184,11 +185,37 @@ export class ChartSection extends Component {
                                     options={this.state.Price.options}
                                     series={this.state.Price.series}
                                     type="area"
+                                    height='700'
+                                    width='1000' />
+
+<div className="row">         
+                        
+                        <div className="col" style={{ maxWidth: '900px' }}>
+                        <div >
+                                <Chart
+                                    options={this.state.Tot_Vol.options}
+                                    series={this.state.Tot_Vol.series}
+                                    type="line"
                                     height='400'
                                     width='600' />
+                            </div>
+                        </div>
+                        <div className="col" style={{ maxWidth: '300px' }}>
+                            <div >
+                                <Chart
+                                    options={this.state.Market_Cap.options}
+                                    series={this.state.Market_Cap.series}
+                                    type="line"
+                                    height='400'
+                                    width='600' />
+                            </div>
+                            
+                        </div>
+                        </div> 
 
-<div className="card-body ">
-                                <h6 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}> Description</h6>
+
+                        <div className="card-body ">
+                                <h3 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}> Description</h3>
                                 <p className="card-text fw-bold "
                                     style={{ fontFamily: 'NHaasGroteskDSPro-65Md', color: 'rgb(700, 700, 700)', fontSize: 'small' }}>
                                      {this.props.Descrpt}
@@ -200,64 +227,47 @@ export class ChartSection extends Component {
                        
                     
 
-                        <div className="col" style={{ maxWidth: '310px' }}>
-                            <div >
-                                <Chart
-                                    options={this.state.Market_Cap.options}
-                                    series={this.state.Market_Cap.series}
-                                    type="line"
-                                    height='200'
-                                    width='300' />
-                            </div>
-                            <div >
-                                <Chart
-                                    options={this.state.Tot_Vol.options}
-                                    series={this.state.Tot_Vol.series}
-                                    type="line"
-                                    height='200'
-                                    width='300' />
-                            </div>
-                        </div>
+                      
 
-                        <div className="col" style={{ maxWidth: '400px' }}>
+                        <div className="col" style={{ maxWidth: '2000px' }}>
                     
 
                     
                
 
-                    <div className="card-body ">
-                    <h6 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}> Market Cap </h6>
-                    <p className="card-text fw-bold "
-                        style={{ fontFamily: 'NHaasGroteskDSPro-65Md', color: 'rgb(255, 255, 255)', fontSize: 'small' }}>
+                      <div className="card-body ">
+                      <h3 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}> Market Cap </h3>
+                      <p className="card-text fw-bold "
+                        style={{ fontFamily: 'NHaasGroteskDSPro-65Md', color: 'rgb(255, 255, 255)', fontSize: 'large' }}>
                         $ {this.props.MarketCap}
                     </p>
                 </div>
 
                 <div className="card-body ">
-                    <h6 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}> Price Change 24hrs </h6>
+                    <h3 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}> Price Change 24hrs </h3>
                     <p className="card-text fw-bold "
-                        style={{ fontFamily: 'NHaasGroteskDSPro-65Md', color: 'rgb(255, 255, 255)', fontSize: 'small' }}>
+                        style={{ fontFamily: 'NHaasGroteskDSPro-65Md', color: 'rgb(255, 255, 255)', fontSize: 'large' }}>
                         $ {this.props.priceChange24}
                     </p>
                 </div>
                 <div className="card-body ">
-                    <h6 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}> Total Volume </h6>
+                    <h3 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}> Total Volume </h3>
                     <p className="card-text fw-bold "
-                        style={{ fontFamily: 'NHaasGroteskDSPro-65Md', color: 'rgb(255, 255, 255)', fontSize: 'small' }}>
+                        style={{ fontFamily: 'NHaasGroteskDSPro-65Md', color: 'rgb(255, 255, 255)', fontSize: 'large' }}>
                         $ {this.props.TotVol}
                     </p>
                 </div>
                 <div className="card-body ">
-                    <h6 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}> Circulating Supply</h6>
+                    <h3 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}> Circulating Supply</h3>
                     <p className="card-text fw-bold "
-                        style={{ fontFamily: 'NHaasGroteskDSPro-65Md', color: 'rgb(255, 255, 255)', fontSize: 'small' }}>
+                        style={{ fontFamily: 'NHaasGroteskDSPro-65Md', color: 'rgb(255, 255, 255)', fontSize: 'large' }}>
                         {this.props.Circulating}
                     </p>
                 </div>
                 <div className="card-body ">
-                    <h6 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}> Twitter Followers</h6>
+                    <h3 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}> Twitter Followers</h3>
                     <p className="card-text fw-bold "
-                        style={{ fontFamily: 'NHaasGroteskDSPro-65Md', color: 'rgb(255, 255, 255)', fontSize: 'small' }}>
+                        style={{ fontFamily: 'NHaasGroteskDSPro-65Md', color: 'rgb(255, 255, 255)', fontSize: 'large' }}>
                         {this.props.twitterF}
                     </p>
                 </div>
